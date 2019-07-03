@@ -1,24 +1,20 @@
 {
-  "name": "momentjs-layer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "prebuild": "rimraf nodejs",
-    "install": "npm i",
-    "build": "run-s install createNodejs copyFiles zipFiles",
-    "createNodejs": "mkdir nodejs",
-    "copyFiles": "copyfiles node_modules nodejs",
-    "zipFiles": "bestzip momentLayer.zip nodejs"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bestzip": "^2.1.4",
-    "copyfiles": "^2.1.0",
-    "moment": "^2.24.0",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^2.6.3"
-  }
+    "name": "momentjs-layer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "del-cli -f nodejs && npm install && mkdir nodejs && copyfiles node_modules/**/*.* nodejs && bestzip moment-layer.zip nodejs && del-cli -f nodejs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "moment": "^2.24.0"
+    },
+    "devDependencies": {
+        "bestzip": "^2.1.4",
+        "copyfiles": "^2.1.0",
+        "del-cli": "^2.0.0"
+    }
 }
