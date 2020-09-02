@@ -13,7 +13,7 @@
         "moment": "^2.24.0"
     },
     "devDependencies": {
-        "bestzip": "^2.1.4",
+        "bestzip": "^2.1.7",
         "copyfiles": "^2.1.0",
         "del-cli": "^2.0.0"
     }
